@@ -6,7 +6,7 @@ class Hangman:
         self.num_lives = 5
         self.word = random.choice(word_list)
         self.word_guessed = list(len(self.word)* '_')
-        self.num_letters = [len(self.word_guessed)]
+        self.num_letters = set(self.word)
         list_of_guesses = []
         print(self.num_letters)
         print(self.word_guessed)
