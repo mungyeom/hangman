@@ -13,7 +13,7 @@ class Hangman:
         guess = guess.lower()
         if guess in self.word:
             print("Good guess! {0} is in the word." .format(guess))
-        for i in self.word:
+        for i in range(0,len(self.word)):
             letter = self.word[i]
             if guess == letter:
                self.word_guessed[i] = guess
