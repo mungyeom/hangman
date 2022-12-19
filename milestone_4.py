@@ -7,7 +7,7 @@ class Hangman:
         self.word = random.choice(word_list)
         self.word_guessed = list(len(self.word)* '_')
         self.num_letters = len(set(self.word))
-        self.list_of_guesses = ['a']
+        self.list_of_guesses = []
 
     def check_guess(self,guess):
         guess = guess.lower()
@@ -26,10 +26,3 @@ class Hangman:
                 return self.check_guess(guess)
             self.list_of_guesses.append(guess)
 
-
-
-word_list = ['kiwi','banana', 'orange']
-
-game = Hangman(word_list,5)
-
-this = game.ask_for_input()
