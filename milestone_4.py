@@ -13,15 +13,16 @@ class Hangman:
         guess = guess.lower()
         if guess in self.word:
             print("Good guess! {0} is in the word." .format(guess))
-        for i in range(0,len(self.word)):
-            letter = self.word[i]
-            if letter == guess:
-                guess = self.word_guessed[i]
+            for i in range(0,len(self.word)):
+                letter = self.word[i]
+                if letter == guess:
+                    guess = self.word_guessed[i]
         # else:
         #     self.num_lives -= 1
         #     print(f"Sorry, {letter} is not in the word.")
         #     print(f"You have {self.num_lives} lives left.")
-        self.num_lives -= 1
+        else:
+            self.num_lives -= 1
         self.list_of_guesses.append(guess)
 
     def ask_for_input(self):
