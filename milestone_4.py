@@ -19,6 +19,7 @@ class Hangman:
                self.word_guessed[i] = guess
         self.num_letters -= 1
 
+
     def ask_for_input(self):
         while True:
             guess = input('enter a single letter ')
