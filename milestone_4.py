@@ -8,9 +8,29 @@ class Hangman:
         self.word_guessed = list(len(self.word)* '_')
         self.num_letters = len(set(self.word))
         self.list_of_guesses = []
-        print(self.num_letters)
-        print(self.word_guessed)
-        print(self.list_of_guesses)
+
+    def check_guess(self,guess):
+        guess = guess.lower()
+        if guess in self.word:
+            print("Good guess! {0} is in the word." .format(guess))
+
     
-        
+    def ask_for_input(self):
+        while True:
+            guess = input('enter a single letter ')
+            if len(guess) != 1 or guess.isalpha() != True:
+                print('Invalid letter. Please, enter a single alphabetical character.')
+            elif guess in self.list_of_guesses:
+                print("You already tried that letter!")
+            else:
+                return self.check_guess(guess)
+            self.list_of_guesses.append(guess)
+
+
+
+word_list = ['kiwi','banana', 'orange']
+
+game = Hangman(word_list,5)
+
+this = game.ask_for_input()
 
