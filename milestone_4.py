@@ -15,10 +15,10 @@ class Hangman:
         guess = guess.lower()
         if guess in self.word:
             print("Good guess! {0} is in the word." .format(guess))
-            for i in range(0,len(self.word)):
-                letter = self.word[i]
-                if letter == guess:
-                    guess = self.word_guessed[i]
+            # for i in range(0,len(self.word)):
+            #     letter = self.word[i]
+            #     if letter == guess:
+            #         guess = self.word_guessed[i]
                     # self.list_of_guesses.append(guess)
         # else:
         #     self.num_lives -= 1
@@ -36,8 +36,8 @@ class Hangman:
             elif guess in self.list_of_guesses:
                 print('You already tried that letter!')
             else:
-                self.list_of_guesses.append(guess)
                 self.check_guess(guess)
+                self.list_of_guesses.append(guess)
             break
 
 
