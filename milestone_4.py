@@ -3,14 +3,13 @@ import random
 class Hangman:
     def __init__(self, word_list,num_lives):
         self.word_list = word_list
-        self.num_lives = num_lives
-        num_lives = 5
-        word = random.choice(word_list)
-        word_guessed = list(len(word)* '_')
-        num_letters = [len(word_guessed)]
+        self.num_lives = 5
+        self.word = random.choice(word_list)
+        self.word_guessed = list(len(self.word)* '_')
+        self.num_letters = [len(self.word_guessed)]
         list_of_guesses = []
-        print(num_letters)
-        print(word_guessed)
+        print(self.num_letters)
+        print(self.word_guessed)
         print(list_of_guesses)
     
         
