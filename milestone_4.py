@@ -20,11 +20,11 @@ class Hangman:
             guess = input('enter a single letter ')
             if len(guess) != 1 or guess.isalpha() != True:
                 print('Invalid letter. Please, enter a single alphabetical character.')
-            elif guess == self.list_of_guesses:
+            elif guess in []:
                 print('You already tried that letter!')
             else:
                 return self.check_guess(guess)
-            self.list_of_guesses.append(guess)
+            [].append(guess)
 
 
 
