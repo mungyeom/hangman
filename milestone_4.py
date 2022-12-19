@@ -7,7 +7,7 @@ class Hangman:
         self.word = random.choice(word_list)
         self.word_guessed = list(len(self.word)* '_')
         self.num_letters = len(set(self.word))
-        self.list_of_guesses = []
+        self.list_of_guesses = ['a']
 
     def check_guess(self,guess):
         guess = guess.lower()
@@ -21,7 +21,7 @@ class Hangman:
             if len(guess) != 1 or guess.isalpha() != True:
                 print('Invalid letter. Please, enter a single alphabetical character.')
             elif guess in self.list_of_guesses:
-                print("You already tried that letter!")
+                print('You already tried that letter!')
             else:
                 return self.check_guess(guess)
             self.list_of_guesses.append(guess)
